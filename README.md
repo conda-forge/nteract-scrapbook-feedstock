@@ -119,4 +119,5 @@ Feedstock Maintainers
 =====================
 
 * [@bollwyvl](https://github.com/bollwyvl/)
+* [@mseal](https://github.com/mseal/)
 
