@@ -1,5 +1,5 @@
 {% set name = "nteract-scrapbook" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 27dfad870797e6b49152b49cacc55869349e259097568732f273d8703bae91fe
+  sha256: 1a5e2d9d04b2d2ce2d05e430429966411ee765c263e4f9aecfa01807fc3b23b2
 
 build:
   noarch: python
