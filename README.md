@@ -5,9 +5,11 @@ Home: https://github.com/nteract/scrapbook
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nteract-scrapbook-feedstock/blob/master/LICENSE.txt)
 
 Summary: A library for recording and reading data in notebooks. 
+
+Documentation: https://nteract-scrapbook.readthedocs.io
 
 THE scrapbook library records a notebook’s data values and generated visual
 content as "scraps". Recorded scraps can be read at a future time.
