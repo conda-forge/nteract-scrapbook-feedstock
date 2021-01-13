@@ -38,22 +38,22 @@ Current release info
 Installing nteract-scrapbook
 ============================
 
-Installing `nteract-scrapbook` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `scrapbook` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `nteract-scrapbook` can be installed with:
+Once the `conda-forge` channel has been enabled, `scrapbook` can be installed with:
 
 ```
-conda install nteract-scrapbook
+conda install scrapbook
 ```
 
-It is possible to list all of the versions of `nteract-scrapbook` available on your platform with:
+It is possible to list all of the versions of `scrapbook` available on your platform with:
 
 ```
-conda search nteract-scrapbook --channel conda-forge
+conda search scrapbook --channel conda-forge
 ```
 
 
@@ -98,7 +98,7 @@ Terminology
 Updating nteract-scrapbook-feedstock
 ====================================
 
-If you would like to improve the nteract-scrapbook recipe or build a new
+If you would like to improve the scrapbook recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once

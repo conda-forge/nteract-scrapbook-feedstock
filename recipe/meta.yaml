@@ -1,5 +1,5 @@
-{% set name = "nteract-scrapbook" %}
-{% set version = "0.4.2" %}
+{% set name = "scrapbook" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1a5e2d9d04b2d2ce2d05e430429966411ee765c263e4f9aecfa01807fc3b23b2
+  sha256: 6875bc804c3278a00544dbc232cb96e7cf8a563c36e02b17dcae329d05470cd0
 
 build:
   noarch: python
@@ -49,7 +49,7 @@ about:
   license_file: LICENSE
   summary: 'A library for recording and reading data in notebooks. '
   description: |
-    THE scrapbook library records a notebook’s data values and generated visual
+    The scrapbook library records a notebook’s data values and generated visual
     content as "scraps". Recorded scraps can be read at a future time.
   doc_url: https://nteract-scrapbook.readthedocs.io
   doc_source_url: https://github.com/nteract/scrapbook/tree/master/docs
