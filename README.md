@@ -1,5 +1,5 @@
-About nteract-scrapbook
-=======================
+About scrapbook
+===============
 
 Home: https://github.com/nteract/scrapbook
 
@@ -11,7 +11,7 @@ Summary: A library for recording and reading data in notebooks.
 
 Documentation: https://nteract-scrapbook.readthedocs.io
 
-THE scrapbook library records a notebook’s data values and generated visual
+The scrapbook library records a notebook’s data values and generated visual
 content as "scraps". Recorded scraps can be read at a future time.
 
 
@@ -33,27 +33,27 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-nteract--scrapbook-green.svg)](https://anaconda.org/conda-forge/nteract-scrapbook) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/nteract-scrapbook.svg)](https://anaconda.org/conda-forge/nteract-scrapbook) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/nteract-scrapbook.svg)](https://anaconda.org/conda-forge/nteract-scrapbook) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/nteract-scrapbook.svg)](https://anaconda.org/conda-forge/nteract-scrapbook) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scrapbook-green.svg)](https://anaconda.org/conda-forge/scrapbook) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scrapbook.svg)](https://anaconda.org/conda-forge/scrapbook) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scrapbook.svg)](https://anaconda.org/conda-forge/scrapbook) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scrapbook.svg)](https://anaconda.org/conda-forge/scrapbook) |
 
-Installing nteract-scrapbook
-============================
+Installing scrapbook
+====================
 
-Installing `nteract-scrapbook` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `scrapbook` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `nteract-scrapbook` can be installed with:
+Once the `conda-forge` channel has been enabled, `scrapbook` can be installed with:
 
 ```
-conda install nteract-scrapbook
+conda install scrapbook
 ```
 
-It is possible to list all of the versions of `nteract-scrapbook` available on your platform with:
+It is possible to list all of the versions of `scrapbook` available on your platform with:
 
 ```
-conda search nteract-scrapbook --channel conda-forge
+conda search scrapbook --channel conda-forge
 ```
 
 
@@ -95,17 +95,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating nteract-scrapbook-feedstock
-====================================
+Updating scrapbook-feedstock
+============================
 
-If you would like to improve the nteract-scrapbook recipe or build a new
+If you would like to improve the scrapbook recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/nteract-scrapbook-feedstock are
+Note that all branches in the conda-forge/scrapbook-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
