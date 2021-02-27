@@ -1,46 +1,76 @@
-{% set name = "scrapbook" %}
 {% set version = "0.5.0" %}
+{% set build_number = "1" %}
+{% set python_version = ">=3.5" %}
 
 package:
-  name: {{ name|lower }}
+  name: scrapbook-build
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/s/scrapbook/scrapbook-{{ version }}.tar.gz
   sha256: 6875bc804c3278a00544dbc232cb96e7cf8a563c36e02b17dcae329d05470cd0
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: {{ build_number }}
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_version }}
     - pip
   run:
-    - ipython
-    - jsonschema
-    - pandas
-    - papermill
-    - pyarrow
-    - python >=3.5
+    - python {{ python_version }}
 
 test:
-  requires:
-    - coverage
-    - ipython
-    - mock
-    - pip
-    - pytest >=4.1
-    - pytest-cov >=2.6.1
-    - pytest-env >=0.6.2
-    - pytest-mock >=1.10
-  imports:
-    - scrapbook
   commands:
-    - python -m pytest --pyargs scrapbook --cov scrapbook -v
-    - python -m pip check
+    - echo "tests in subpackages"
+
+outputs:
+  - name: scrapbook
+    build:
+      noarch: python
+      number: {{ build_number }}
+      script: python -m pip install . -vv --no-deps
+    requirements:
+      host:
+        - python {{ python_version }}
+        - pip
+      run:
+        - ipython
+        - jsonschema
+        - pandas
+        - papermill
+        - pyarrow
+        - python {{ python_version }}
+    test:
+      requires:
+        - coverage
+        - ipython
+        - mock
+        - pip
+        - pytest >=4.1
+        - pytest-cov >=2.6.1
+        - pytest-env >=0.6.2
+        - pytest-mock >=1.10
+      imports:
+        - scrapbook
+      commands:
+        - pip check
+        - pytest -v --pyargs scrapbook --cov scrapbook --no-cov-on-fail --cov-report term-missing:skip-covered --cov-fail-under 96
+
+  - name: nteract-scrapbook
+    build:
+      noarch: python
+      number: {{ build_number }}
+    requirements:
+      host:
+        - python {{ python_version }}
+      run:
+        - python {{ python_version }}
+        - scrapbook =={{ version }}
+    test:
+      imports:
+        - scrapbook
 
 about:
   home: https://github.com/nteract/scrapbook
