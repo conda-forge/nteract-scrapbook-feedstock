@@ -1,6 +1,4 @@
 {% set version = "0.5.0" %}
-{% set build_number = "1" %}
-{% set python_version = ">=3.5" %}
 
 package:
   name: scrapbook-build
@@ -12,65 +10,36 @@ source:
 
 build:
   noarch: python
-  number: {{ build_number }}
+  number: 2
+  script: python -m pip install . -vv --no-deps
 
 requirements:
   host:
-    - python {{ python_version }}
     - pip
+    - python >=3.5
   run:
-    - python {{ python_version }}
+    - ipython
+    - jsonschema
+    - pandas
+    - papermill
+    - pyarrow
+    - python >=3.5
 
 test:
+  requires:
+    - coverage
+    - ipython
+    - mock
+    - pip
+    - pytest >=4.1
+    - pytest-cov >=2.6.1
+    - pytest-env >=0.6.2
+    - pytest-mock >=1.10
+  imports:
+    - scrapbook
   commands:
-    - echo "tests in subpackages"
-
-outputs:
-  - name: scrapbook
-    build:
-      noarch: python
-      number: {{ build_number }}
-      script: python -m pip install . -vv --no-deps
-    requirements:
-      host:
-        - python {{ python_version }}
-        - pip
-      run:
-        - ipython
-        - jsonschema
-        - pandas
-        - papermill
-        - pyarrow
-        - python {{ python_version }}
-    test:
-      requires:
-        - coverage
-        - ipython
-        - mock
-        - pip
-        - pytest >=4.1
-        - pytest-cov >=2.6.1
-        - pytest-env >=0.6.2
-        - pytest-mock >=1.10
-      imports:
-        - scrapbook
-      commands:
-        - pip check
-        - pytest -v --pyargs scrapbook --cov scrapbook --no-cov-on-fail --cov-report term-missing:skip-covered --cov-fail-under 96
-
-  - name: nteract-scrapbook
-    build:
-      noarch: python
-      number: {{ build_number }}
-    requirements:
-      host:
-        - python {{ python_version }}
-      run:
-        - python {{ python_version }}
-        - scrapbook =={{ version }}
-    test:
-      imports:
-        - scrapbook
+    - pip check
+    - pytest -v --pyargs scrapbook --cov scrapbook --no-cov-on-fail --cov-report term-missing:skip-covered --cov-fail-under 96
 
 about:
   home: https://github.com/nteract/scrapbook

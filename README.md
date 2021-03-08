@@ -33,8 +33,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-nteract--scrapbook-green.svg)](https://anaconda.org/conda-forge/nteract-scrapbook) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/nteract-scrapbook.svg)](https://anaconda.org/conda-forge/nteract-scrapbook) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/nteract-scrapbook.svg)](https://anaconda.org/conda-forge/nteract-scrapbook) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/nteract-scrapbook.svg)](https://anaconda.org/conda-forge/nteract-scrapbook) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-scrapbook-green.svg)](https://anaconda.org/conda-forge/scrapbook) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scrapbook.svg)](https://anaconda.org/conda-forge/scrapbook) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scrapbook.svg)](https://anaconda.org/conda-forge/scrapbook) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scrapbook.svg)](https://anaconda.org/conda-forge/scrapbook) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-scrapbook--build-green.svg)](https://anaconda.org/conda-forge/scrapbook-build) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scrapbook-build.svg)](https://anaconda.org/conda-forge/scrapbook-build) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scrapbook-build.svg)](https://anaconda.org/conda-forge/scrapbook-build) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scrapbook-build.svg)](https://anaconda.org/conda-forge/scrapbook-build) |
 
 Installing scrapbook-build
 ==========================
@@ -45,16 +44,16 @@ Installing `scrapbook-build` from the `conda-forge` channel can be achieved by a
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `nteract-scrapbook, scrapbook` can be installed with:
+Once the `conda-forge` channel has been enabled, `scrapbook-build` can be installed with:
 
 ```
-conda install nteract-scrapbook scrapbook
+conda install scrapbook-build
 ```
 
-It is possible to list all of the versions of `nteract-scrapbook` available on your platform with:
+It is possible to list all of the versions of `scrapbook-build` available on your platform with:
 
 ```
-conda search nteract-scrapbook --channel conda-forge
+conda search scrapbook-build --channel conda-forge
 ```
 
 
