@@ -29,6 +29,8 @@ test:
   requires:
     - coverage
     - ipython
+    # seemingly needed for ipython_genutils
+    - jupyter
     - mock
     - pip
     - pytest >=4.1
