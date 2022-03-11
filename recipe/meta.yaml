@@ -1,7 +1,7 @@
 {% set version = "0.5.0" %}
 
 package:
-  name: scrapbook-build
+  name: scrapbook
   version: {{ version }}
 
 source:
@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 2
+  number: 3
   script: python -m pip install . -vv --no-deps
 
 requirements:
