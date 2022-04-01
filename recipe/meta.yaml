@@ -1,7 +1,7 @@
 {% set version = "0.5.0" %}
 
 package:
-  name: scrapbook-build
+  name: scrapbook
   version: {{ version }}
 
 source:
@@ -10,8 +10,8 @@ source:
 
 build:
   noarch: python
-  number: 2
-  script: python -m pip install . -vv --no-deps
+  number: 3
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
@@ -39,7 +39,7 @@ test:
     - scrapbook
   commands:
     - pip check
-    - pytest -v --pyargs scrapbook --cov scrapbook --no-cov-on-fail --cov-report term-missing:skip-covered --cov-fail-under 96
+    - pytest -v --pyargs scrapbook --cov scrapbook --no-cov-on-fail --cov-report term-missing:skip-covered --cov-fail-under 96 -k "not unsupported_arrow_conversions"
 
 about:
   home: https://github.com/nteract/scrapbook
@@ -48,7 +48,7 @@ about:
   license_file: LICENSE
   summary: 'A library for recording and reading data in notebooks. '
   description: |
-    The scrapbook library records a notebook’s data values and generated visual
+    The scrapbook library records a notebook's data values and generated visual
     content as "scraps". Recorded scraps can be read at a future time.
   doc_url: https://nteract-scrapbook.readthedocs.io
   doc_source_url: https://github.com/nteract/scrapbook/tree/master/docs
