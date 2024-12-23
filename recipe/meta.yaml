@@ -5,25 +5,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/scrapbook/scrapbook-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/scrapbook/scrapbook-{{ version }}.tar.gz
   sha256: 6875bc804c3278a00544dbc232cb96e7cf8a563c36e02b17dcae329d05470cd0
 
 build:
   noarch: python
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . -vv --no-deps
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - ipython
     - jsonschema
     - pandas
     - papermill
     - pyarrow
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   requires:
@@ -35,6 +35,7 @@ test:
     - pytest-cov >=2.6.1
     - pytest-env >=0.6.2
     - pytest-mock >=1.10
+    - python {{ python_min }}
   imports:
     - scrapbook
   commands:
