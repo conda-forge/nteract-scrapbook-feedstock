@@ -32,6 +32,7 @@ test:
     - coverage
     - ipython
     - mock
+    - pandas <2
     - pip
     - pytest >=4.1
     - pytest-cov >=2.6.1
